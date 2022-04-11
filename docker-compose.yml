@@ -1,0 +1,21 @@
+# APENAS BANCO
+version: '3.9'
+
+services:
+  db:
+    image: postgres:12.9-alpine
+    container_name: django_vue_backend_dev
+    restart: always
+    env_file:
+      - .env
+#    environment:
+#      - POSTGRES_DB=django_vue_backend
+#      - POSTGRES_NAME=postgres
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./config/data:/var/lib/postgresql/data
+    ports:
+      - "5439:5432"
+
+
