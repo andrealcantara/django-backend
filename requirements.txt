@@ -1,0 +1,2 @@
+-r config/requirements/requirements_core.txt
+-r config/requirements/requirements_dev.txt
