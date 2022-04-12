@@ -10,5 +10,5 @@ services:
       - .env
     volumes:
       - ./config/data:/var/lib/postgresql/data
-    expose:
-      - 5432
+    ports:
+      - "5432:5432"
